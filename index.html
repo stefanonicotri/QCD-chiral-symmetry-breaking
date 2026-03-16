@@ -34,6 +34,8 @@
             --code-bg: #f8f9fa;
             --border-color: #e1e4e8;
             --note-bg: #e8f4f8;
+            --historical-bg: #fdf2e9;
+            --historical-border: #e67e22;
             --shadow-color: rgba(0,0,0,0.1);
             --transition-speed: 0.3s;
         }
@@ -49,6 +51,8 @@
             --code-bg: #2d2d2d;
             --border-color: #3c4043;
             --note-bg: #172a3a;
+            --historical-bg: #3e2723;
+            --historical-border: #d84315;
             --shadow-color: rgba(0,0,0,0.5);
         }
 
@@ -152,6 +156,11 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 0.95em;
             transition: background-color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+        }
+
+        .historical {
+            background-color: var(--historical-bg);
+            border-left: 4px solid var(--historical-border);
         }
         
         .grid-list {
@@ -347,10 +356,6 @@
     <h3>Phenomenology: Proton Stability</h3>
     <p>Because $U(1)_V$ is an exact quantum symmetry of QCD, Baryon Number is strictly conserved. This is why the proton is stable. If $U(1)_V$ were broken, the proton could decay into lighter particles (e.g., $p^+ \rightarrow e^+ + \pi^0$). The exactness of this symmetry is the structural foundation of all stable atomic matter.</p>
 
-    <div class="note">
-        <strong>Theoretical Note (Accidental Symmetry):</strong> In the Standard Model, $U(1)_V$ was never demanded as a fundamental gauge symmetry. It is an "accidental symmetry"—a lucky mathematical consequence of the restricted particle content and the requirement of renormalizability.
-    </div>
-
     <h2 id="sec4">4. The Fate of the Symmetries</h2>
     <p>This massive symmetry group is shattered in entirely distinct ways, dictating low-energy hadron physics:</p>
     
@@ -404,6 +409,14 @@
     </div>
 
     <h2 id="sec8">8. The $U(1)_A$ Anomaly via Fujikawa's Method</h2>
+    
+    <div class="note historical">
+        <strong style="color: var(--historical-border); font-size: 1.1em;">Historical Context: The $U(1)$ Problem</strong><br>
+        Before the discovery of the quantum anomaly, particle physics was plagued by a massive theoretical crisis. If the classical $U(1)_A$ symmetry is assumed to be exact, its spontaneous breaking by the chiral condensate mathematically necessitates a massless flavor-singlet Goldstone boson (the $\eta^\prime$). Even when factoring in explicit mass breaking, Steven Weinberg calculated a strict upper bound: $m_{\eta^\prime} \le \sqrt{3} m_\pi \approx 240 \text{ MeV}$. 
+        <br><br>
+        Experimentalists, however, found the $\eta^\prime$ weighed a massive $958 \text{ MeV}$. This glaring contradiction meant either Goldstone's Theorem was wrong, or the fundamental $U(1)_A$ symmetry was an illusion. The discovery of the topological anomaly proved the latter, saving the mathematical foundations of QFT.
+    </div>
+
     <p>While the $SU(3)_A$ symmetry is broken spontaneously, the singlet $U(1)_A$ symmetry is shattered entirely by quantum effects. Kazuo Fujikawa (1979) elegantly proved that this anomaly arises strictly from the non-invariance of the path integral measure.</p>
     
     <h3>The Path Integral Measure</h3>
