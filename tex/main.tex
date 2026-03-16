@@ -12,14 +12,12 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={QCD Chiral Dynamics},
-    pdfauthor={Stefano Nicotri}
+    pdftitle={QCD Chiral Dynamics}
 }
 \usepackage{tcolorbox} % For the summary note at the end
 
 % --- Title Information ---
 \title{\textbf{QCD Chiral Dynamics}\\ \Large Symmetries, Anomalies, and the Vacuum}
-\author{Stefano Nicotri}
 \date{\today}
 
 \begin{document}
@@ -65,6 +63,36 @@ V^\mu = \bar{q} \gamma^\mu q, \quad A^\mu = \bar{q} \gamma^\mu \gamma_5 q
 \]
 
 % --- SECTION 3 ---
+\section{The Exact Symmetry: $U(1)_V$ and Baryon Conservation}
+
+While the axial symmetries govern the complex mass spectrum of mesons, the $U(1)_V$ symmetry does something arguably more important: it ensures the stability of matter.
+
+\subsection{The Vector Transformation}
+The $U(1)_V$ subgroup corresponds to applying the exact same phase transformation to both left-handed and right-handed fields simultaneously: $L = R = e^{i\alpha}$. The Dirac spinor transforms globally as:
+\[
+q(x) \rightarrow e^{i\alpha} q(x), \quad \bar{q}(x) \rightarrow \bar{q}(x) e^{-i\alpha}
+\]
+
+\subsection{Perfect Classical Invariance}
+Unlike the axial transformations ($e^{i\alpha\gamma_5}$), which flip signs when pulled through the $\gamma_0$ matrix and cause the mass term to break the symmetry, the pure vector phase commutes with everything. The kinetic and mass terms are perfectly invariant:
+\[
+m \bar{q} q \rightarrow m (\bar{q} e^{-i\alpha}) (e^{i\alpha} q) = m \bar{q} q
+\]
+This means $U(1)_V$ is an exact classical symmetry of the Lagrangian, regardless of whether the quarks are massless or massive.
+
+\subsection{The Noether Current and Baryon Number}
+By Noether's Theorem, this continuous symmetry corresponds to a strictly conserved vector current $V^\mu = \bar{q} \gamma^\mu q$. The conserved charge is the spatial integral of the zeroth component (the number operator):
+\[
+Q_V = \int d^3x \, q^\dagger q = N_q - N_{\bar{q}}
+\]
+This operator counts the total number of quarks minus antiquarks. We define the \textbf{Baryon Number ($B$)} as $B = \frac{1}{3} (N_q - N_{\bar{q}})$.
+
+\subsection{Surviving the Quantum Realm and Proton Stability}
+Does $U(1)_V$ suffer a quantum anomaly like $U(1)_A$? No. The Fujikawa Jacobian for a pure vector transformation evaluates to exactly 1. Because there is no $\gamma_5$ matrix to force a non-zero trace with the gluon field strength tensors, the anomaly trace vanishes entirely. The conservation is exact at the quantum level: $\partial_\mu V^\mu = 0$.
+
+Because $U(1)_V$ is an exact quantum symmetry of QCD, Baryon Number is strictly conserved. This is why the proton is stable. If $U(1)_V$ were broken, the proton could decay into lighter particles (e.g., $p^+ \rightarrow e^+ + \pi^0$). The exactness of this symmetry is the structural foundation of all stable atomic matter.
+
+% --- SECTION 4 ---
 \section{The Fate of the Symmetries}
 
 This massive symmetry group is shattered in entirely distinct ways, dictating low-energy hadron physics:
@@ -76,7 +104,7 @@ This massive symmetry group is shattered in entirely distinct ways, dictating lo
     \item \textbf{Anomalous Breaking ($U(1)_A$):} Explicitly broken by the quantum mechanics of the path integral measure. It does not produce a light Goldstone boson, resulting in the heavy $\eta^\prime$ meson mass ($958 \text{ MeV}$).
 \end{itemize}
 
-% --- SECTION 4 ---
+% --- SECTION 5 ---
 \section{Spontaneous Symmetry Breaking and the Vacuum}
 
 The non-zero vacuum expectation value (VEV) is the \textbf{chiral condensate}:
@@ -85,7 +113,7 @@ The non-zero vacuum expectation value (VEV) is the \textbf{chiral condensate}:
 \]
 Where $\Sigma \approx (250 \text{ MeV})^3$. According to Goldstone's Theorem, for every broken generator, a massless scalar particle appears. There are $8$ broken axial generators, resulting in an octet of Goldstone bosons.
 
-% --- SECTION 5 ---
+% --- SECTION 6 ---
 \section{Chiral Perturbation Theory (ChPT)}
 
 We parameterize the Goldstone bosons as phase fluctuations of the chiral condensate. We define a unitary $3 \times 3$ matrix field $U(x) \in SU(3)$:
@@ -97,7 +125,7 @@ The leading order $\mathcal{O}(p^2)$ term is the non-linear sigma model:
 \mathcal{L}_{eff}^{(2)} = \frac{f_\pi^2}{4} \text{Tr}\left( \partial_\mu U \partial^\mu U^\dagger \right)
 \]
 
-% --- SECTION 6 ---
+% --- SECTION 7 ---
 \section{Explicit Breaking and the GMOR Relation}
 
 The leading-order explicit symmetry breaking term in the ChPT Lagrangian is:
@@ -109,7 +137,7 @@ Here, $B_0$ is a low-energy constant related to the condensate: $\Sigma = f_\pi^
 m_\pi^2 = 2 B_0 \hat{m} = \frac{-\langle \bar{u}u + \bar{d}d \rangle}{2f_\pi^2} (m_u + m_d)
 \]
 
-% --- SECTION 7 ---
+% --- SECTION 8 ---
 \section{The $U(1)_A$ Anomaly via Fujikawa's Method}
 
 While the $SU(3)_A$ symmetry is broken spontaneously, the singlet $U(1)_A$ symmetry is shattered entirely by quantum effects. Kazuo Fujikawa (1979) elegantly proved that this anomaly arises strictly from the non-invariance of the path integral measure.
@@ -138,7 +166,7 @@ To survive the limit $M \to \infty$ and yield a non-zero Dirac trace, we extract
 \partial_\mu A^\mu = \frac{g^2 N_f}{32\pi^2} \epsilon^{\mu\nu\rho\sigma} G_{\mu\nu}^a G_{\rho\sigma}^a = \frac{g^2 N_f}{16\pi^2} \text{Tr}_c(G_{\mu\nu} \tilde{G}^{\mu\nu})
 \]
 
-% --- SECTION 8 ---
+% --- SECTION 9 ---
 \section{The Mathematics of the Instanton}
 
 The term $G_{\mu\nu}\tilde{G}^{\mu\nu}$ is a total derivative. The QCD vacuum is topologically non-trivial, characterized by integer winding numbers. \textbf{Instantons} are classical solutions in Euclidean spacetime interpolating between these states.
@@ -160,7 +188,7 @@ Tunneling forces the true energy eigenstate to be a Bloch-like superposition, th
 |\theta\rangle = \sum_{n=-\infty}^{\infty} e^{in\theta} |n\rangle
 \]
 
-% --- SECTION 9 ---
+% --- SECTION 10 ---
 \section{The 't Hooft Vertex and the Mass of the $\eta^\prime$}
 
 According to the Atiyah-Singer Index Theorem, an instanton gauge field background ($Q=1$) guarantees exactly one left-handed zero-energy solution to the Dirac equation for every light quark flavor. 
@@ -179,7 +207,7 @@ Summing over all permutations, the dynamically generated mass term is completely
 \]
 Projecting the physical meson states onto this operator, the traceless octet Goldstone bosons ($\pi^0, \eta_8$) cancel to zero. The instanton exclusively isolates the flavor-singlet state $|\eta_0 \rangle$, generating a massive shift solely for the $\eta^\prime$.
 
-% --- SECTION 10 ---
+% --- SECTION 11 ---
 \section{Large-$N_c$ and the Witten-Veneziano Formula}
 
 In the large-$N_c$ limit, the mass generation is formalized rigorously by the \textbf{Witten-Veneziano formula}, tying the pure Yang-Mills topological susceptibility $\chi_t$ to the mass of the $\eta^\prime$:

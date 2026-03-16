@@ -281,14 +281,15 @@
         <ul>
             <li><a href="#sec1">1. The QCD Lagrangian and the Chiral Limit</a></li>
             <li><a href="#sec2">2. The Chiral Algebra and Currents</a></li>
-            <li><a href="#sec3">3. The Fate of the Symmetries</a></li>
-            <li><a href="#sec4">4. Spontaneous Symmetry Breaking and the Vacuum</a></li>
-            <li><a href="#sec5">5. Chiral Perturbation Theory (ChPT)</a></li>
-            <li><a href="#sec6">6. Explicit Breaking and the GMOR Relation</a></li>
-            <li><a href="#sec7">7. The U(1)_A Anomaly via Fujikawa's Method</a></li>
-            <li><a href="#sec8">8. The Mathematics of the Instanton</a></li>
-            <li><a href="#sec9">9. The 't Hooft Vertex and the Mass of the &eta;&#39;</a></li>
-            <li><a href="#sec10">10. Large-N_c and the Witten-Veneziano Formula</a></li>
+            <li><a href="#sec3">3. The Exact Symmetry: $U(1)_V$ and Baryon Conservation</a></li>
+            <li><a href="#sec4">4. The Fate of the Symmetries</a></li>
+            <li><a href="#sec5">5. Spontaneous Symmetry Breaking and the Vacuum</a></li>
+            <li><a href="#sec6">6. Chiral Perturbation Theory (ChPT)</a></li>
+            <li><a href="#sec7">7. Explicit Breaking and the GMOR Relation</a></li>
+            <li><a href="#sec8">8. The U(1)_A Anomaly via Fujikawa's Method</a></li>
+            <li><a href="#sec9">9. The Mathematics of the Instanton</a></li>
+            <li><a href="#sec10">10. The 't Hooft Vertex and the Mass of the &eta;&#39;</a></li>
+            <li><a href="#sec11">11. Large-N_c and the Witten-Veneziano Formula</a></li>
         </ul>
     </div>
 
@@ -317,7 +318,40 @@
         $$V^\mu = \bar{q} \gamma^\mu q, \quad A^\mu = \bar{q} \gamma^\mu \gamma_5 q$$
     </div>
 
-    <h2 id="sec3">3. The Fate of the Symmetries</h2>
+    <h2 id="sec3">3. The Exact Symmetry: $U(1)_V$ and Baryon Conservation</h2>
+    <p>While the axial symmetries govern the complex mass spectrum of mesons, the $U(1)_V$ symmetry does something arguably more important: it ensures the stability of matter.</p>
+
+    <h3>The Vector Transformation</h3>
+    <p>The $U(1)_V$ subgroup corresponds to applying the exact same phase transformation to both left-handed and right-handed fields simultaneously: $L = R = e^{i\alpha}$. The Dirac spinor transforms globally as:</p>
+    <div class="math-display">
+        $$q(x) \rightarrow e^{i\alpha} q(x), \quad \bar{q}(x) \rightarrow \bar{q}(x) e^{-i\alpha}$$
+    </div>
+
+    <h3>Perfect Classical Invariance</h3>
+    <p>Unlike the axial transformations ($e^{i\alpha\gamma_5}$), which flip signs when pulled through the $\gamma_0$ matrix and cause the mass term to break the symmetry, the pure vector phase commutes with everything. The kinetic and mass terms are perfectly invariant:</p>
+    <div class="math-display">
+        $$m \bar{q} q \rightarrow m (\bar{q} e^{-i\alpha}) (e^{i\alpha} q) = m \bar{q} q$$
+    </div>
+    <p>This means $U(1)_V$ is an exact classical symmetry of the Lagrangian, regardless of whether the quarks are massless or massive.</p>
+
+    <h3>The Noether Current and Baryon Number</h3>
+    <p>By Noether's Theorem, this continuous symmetry corresponds to a strictly conserved vector current $V^\mu = \bar{q} \gamma^\mu q$. The conserved charge is the spatial integral of the zeroth component (the number operator):</p>
+    <div class="math-display">
+        $$Q_V = \int d^3x \, q^\dagger q = N_q - N_{\bar{q}}$$
+    </div>
+    <p>This operator counts the total number of quarks minus antiquarks. We define the <strong>Baryon Number ($B$)</strong> as $B = \frac{1}{3} (N_q - N_{\bar{q}})$.</p>
+
+    <h3>Surviving the Quantum Realm</h3>
+    <p>Does $U(1)_V$ suffer a quantum anomaly like $U(1)_A$? No. The Fujikawa Jacobian for a pure vector transformation evaluates to exactly 1. Because there is no $\gamma_5$ matrix to force a non-zero trace with the gluon field strength tensors, the anomaly trace vanishes entirely. The conservation is exact at the quantum level: $\partial_\mu V^\mu = 0$.</p>
+
+    <h3>Phenomenology: Proton Stability</h3>
+    <p>Because $U(1)_V$ is an exact quantum symmetry of QCD, Baryon Number is strictly conserved. This is why the proton is stable. If $U(1)_V$ were broken, the proton could decay into lighter particles (e.g., $p^+ \rightarrow e^+ + \pi^0$). The exactness of this symmetry is the structural foundation of all stable atomic matter.</p>
+
+    <div class="note">
+        <strong>Theoretical Note (Accidental Symmetry):</strong> In the Standard Model, $U(1)_V$ was never demanded as a fundamental gauge symmetry. It is an "accidental symmetry"—a lucky mathematical consequence of the restricted particle content and the requirement of renormalizability.
+    </div>
+
+    <h2 id="sec4">4. The Fate of the Symmetries</h2>
     <p>This massive symmetry group is shattered in entirely distinct ways, dictating low-energy hadron physics:</p>
     
     <div class="grid-list">
@@ -342,14 +376,14 @@
         </div>
     </div>
     
-    <h2 id="sec4">4. Spontaneous Symmetry Breaking and the Vacuum</h2>
+    <h2 id="sec5">5. Spontaneous Symmetry Breaking and the Vacuum</h2>
     <p>The non-zero vacuum expectation value (VEV) is the <strong>chiral condensate</strong>:</p>
     <div class="math-display">
         $$\langle 0 | \bar{q}_i q_j | 0 \rangle = \langle 0 | \bar{q}_{R,i} q_{L,j} + \bar{q}_{L,i} q_{R,j} | 0 \rangle = - \Sigma \, \delta_{ij}$$
     </div>
     <p>Where $\Sigma \approx (250 \text{ MeV})^3$. According to Goldstone's Theorem, for every broken generator, a massless scalar particle appears. There are $8$ broken axial generators, resulting in an octet of Goldstone bosons.</p>
 
-    <h2 id="sec5">5. Chiral Perturbation Theory (ChPT)</h2>
+    <h2 id="sec6">6. Chiral Perturbation Theory (ChPT)</h2>
     <p>We parameterize the Goldstone bosons as phase fluctuations of the chiral condensate. We define a unitary $3 \times 3$ matrix field $U(x) \in SU(3)$:</p>
     <div class="math-display">
         $$U(x) = \exp\left( i \frac{\sqrt{2}}{f_\pi} \Phi(x) \right), \quad \Phi(x) = \sum_{a=1}^8 \frac{\lambda^a}{\sqrt{2}} \pi^a(x)$$
@@ -359,7 +393,7 @@
         $$\mathcal{L}_{eff}^{(2)} = \frac{f_\pi^2}{4} \text{Tr}\left( \partial_\mu U \partial^\mu U^\dagger \right)$$
     </div>
 
-    <h2 id="sec6">6. Explicit Breaking and the GMOR Relation</h2>
+    <h2 id="sec7">7. Explicit Breaking and the GMOR Relation</h2>
     <p>The leading-order explicit symmetry breaking term in the ChPT Lagrangian is:</p>
     <div class="math-display">
         $$\mathcal{L}_{mass}^{(2)} = \frac{f_\pi^2}{4} 2B_0 \text{Tr}\left( M U^\dagger + U M^\dagger \right)$$
@@ -369,7 +403,7 @@
         $$m_\pi^2 = 2 B_0 \hat{m} = \frac{-\langle \bar{u}u + \bar{d}d \rangle}{2f_\pi^2} (m_u + m_d)$$
     </div>
 
-    <h2 id="sec7">7. The $U(1)_A$ Anomaly via Fujikawa's Method</h2>
+    <h2 id="sec8">8. The $U(1)_A$ Anomaly via Fujikawa's Method</h2>
     <p>While the $SU(3)_A$ symmetry is broken spontaneously, the singlet $U(1)_A$ symmetry is shattered entirely by quantum effects. Kazuo Fujikawa (1979) elegantly proved that this anomaly arises strictly from the non-invariance of the path integral measure.</p>
     
     <h3>The Path Integral Measure</h3>
@@ -409,7 +443,7 @@
         $$\partial_\mu A^\mu = \frac{g^2 N_f}{32\pi^2} \epsilon^{\mu\nu\rho\sigma} G_{\mu\nu}^a G_{\rho\sigma}^a = \frac{g^2 N_f}{16\pi^2} \text{Tr}_c(G_{\mu\nu} \tilde{G}^{\mu\nu})$$
     </div>
 
-    <h2 id="sec8">8. The Mathematics of the Instanton</h2>
+    <h2 id="sec9">9. The Mathematics of the Instanton</h2>
     <p>The term $G_{\mu\nu}\tilde{G}^{\mu\nu}$ on the right side of the anomaly equation is a total derivative. In naive perturbation theory, its integral vanishes. However, the QCD vacuum is topologically non-trivial, characterized by integer winding numbers. To understand how the vacuum transitions between these states, we must find a classical solution to the Euclidean equations of motion: the <strong>Instanton</strong>.</p>
 
     <h3>The Bogomol'nyi Bound and Self-Duality</h3>
@@ -461,7 +495,7 @@
     </div>
     <p>This structure guarantees that topological transitions directly impact the physical spectrum of the theory.</p>
 
-    <h2 id="sec9">9. The 't Hooft Vertex and the Mass of the $\eta^\prime$</h2>
+    <h2 id="sec10">10. The 't Hooft Vertex and the Mass of the $\eta^\prime$</h2>
     <p>We finally arrive at the mechanism by which the topology of the gluon field physically generates the mass of the $\eta^\prime$ meson. This occurs through the interaction between the instanton's fermion zero-modes and the chiral condensate.</p>
 
     <h3>Fermion Zero-Modes and Grassmann Integration</h3>
@@ -524,7 +558,7 @@
     <p>If we project the $\pi^0$ or $\eta_8$ onto our completely symmetric mass operator $(\bar{u}u + \bar{d}d + \bar{s}s)$, the opposing signs cancel out perfectly to zero. The instanton gives exactly **zero** mass to the octet Goldstone bosons.</p>
     <p>However, projecting the singlet state $\eta_0$ onto the symmetric mass operator yields exactly $\eta_0^2$. Therefore, the topological tunneling of the vacuum exclusively isolates the flavor-singlet state, generating a massive shift $\Delta m_0^2$ solely for the $\eta_0$ (which is the primary component of the physical $\eta^\prime$ meson).</p>
 
-    <h2 id="sec10">10. Large-$N_c$ and the Witten-Veneziano Formula</h2>
+    <h2 id="sec11">11. Large-$N_c$ and the Witten-Veneziano Formula</h2>
     <p>In the large-$N_c$ limit, the mass generation is formalized rigorously by the <strong>Witten-Veneziano formula</strong>, tying the pure Yang-Mills topological susceptibility $\chi_t$ to the mass of the $\eta^\prime$:</p>
     <div class="math-display">
         $$m_{\eta^\prime}^2 = m_\eta^2 + \frac{2 N_f}{f_\pi^2} \chi_t$$
@@ -536,7 +570,7 @@
     </div>
 
     <div class="footer">
-        <p>Document compiled and maintained by Stefano Nicotri.</p>
+        <p>Document compiled and maintained for educational purposes.</p>
         <p xmlns:cc="http://creativecommons.org/ns#">
             <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">
                 <img alt="Creative Commons License" class="license-badge" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" />
