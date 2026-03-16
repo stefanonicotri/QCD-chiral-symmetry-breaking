@@ -12,12 +12,14 @@
     linkcolor=blue,
     filecolor=magenta,      
     urlcolor=cyan,
-    pdftitle={QCD Chiral Dynamics}
+    pdftitle={QCD Chiral Dynamics},
+    pdfauthor={Stefano Nicotri}
 }
 \usepackage{tcolorbox} % For the historical note and summary
 
 % --- Title Information ---
 \title{\textbf{QCD Chiral Dynamics}\\ \Large Symmetries, Anomalies, and the Vacuum}
+\author{Stefano Nicotri}
 \date{\today}
 
 \begin{document}
@@ -221,6 +223,27 @@ In the large-$N_c$ limit, the mass generation is formalized rigorously by the \t
 m_{\eta^\prime}^2 = m_\eta^2 + \frac{2 N_f}{f_\pi^2} \chi_t
 \]
 Lattice calculations ($\chi_t \approx (180 \text{ MeV})^4$) perfectly account for the heavy mass of the $\eta^\prime$ ($958 \text{ MeV}$), resolving the $U(1)_A$ problem.
+
+% --- SECTION 12 ---
+\section{Flavor Symmetry Breaking and $\eta-\eta^\prime$ Mixing}
+
+In an idealized universe where all three light quarks have exactly the same mass ($m_u = m_d = m_s$), $SU(3)$ flavor symmetry is exact. In this limit, the pure octet state $|\eta_8\rangle$ and the pure singlet state $|\eta_0\rangle$ would not interact.
+
+However, in reality, the strange quark is significantly heavier than the up and down quarks ($m_s \gg m_{u,d}$). This explicitly breaks the $SU(3)$ flavor symmetry. Because both the $\eta_8$ and the $\eta_0$ have identical quantum numbers ($J^{PC} = 0^{-+}$), this symmetry breaking forces them to mix.
+
+We construct a $2 \times 2$ mass squared matrix in the $(|\eta_8\rangle, |\eta_0\rangle)$ basis. The bare mass of the singlet includes both its GMOR quark-mass contribution and the anomalous instanton contribution ($\Delta m_0^2$):
+\[
+M^2 = \begin{pmatrix} M_{88}^2 & M_{80}^2 \\ M_{08}^2 & M_{00}^2 \end{pmatrix} = \begin{pmatrix} \frac{4}{3}m_K^2 - \frac{1}{3}m_\pi^2 & -\frac{2\sqrt{2}}{3}(m_K^2 - m_\pi^2) \\ -\frac{2\sqrt{2}}{3}(m_K^2 - m_\pi^2) & \frac{2}{3}m_K^2 + \frac{1}{3}m_\pi^2 + \Delta m_0^2 \end{pmatrix}
+\]
+
+Notice the off-diagonal mixing terms $M_{80}^2$ and $M_{08}^2$ are proportional to $(m_K^2 - m_\pi^2)$. If the strange quark mass were equal to the up/down masses, $m_K$ would equal $m_\pi$, the off-diagonal terms would vanish entirely, and there would be no mixing.
+
+To find the physical particles, we diagonalize this matrix via a mixing angle $\theta_P$:
+\begin{align*}
+|\eta\rangle &= \cos\theta_P |\eta_8\rangle - \sin\theta_P |\eta_0\rangle \\
+|\eta^\prime\rangle &= \sin\theta_P |\eta_8\rangle + \cos\theta_P |\eta_0\rangle
+\end{align*}
+Phenomenological fits dictate that this mixing angle is relatively small ($\theta_P \approx -15^\circ$). Therefore, the physical $\eta$ particle is predominantly the $SU(3)$ octet Goldstone boson, while the physical $\eta^\prime$ particle is predominantly the massive, anomalous $U(1)_A$ singlet.
 
 \vspace{1cm}
 \begin{tcolorbox}[colback=blue!5!white,colframe=blue!75!black,title=Summary]
